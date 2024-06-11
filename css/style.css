@@ -1,0 +1,137 @@
+.main{
+    display:grid;
+    grid-template-columns: 40% 60%;
+    gap:20px;
+    height: 100vh;
+    overflow: hidden;
+}
+.main .left-section{
+    background-color: darkslateblue;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding:0 20px;
+    color:#fff;
+}
+.main .left-section .search{
+    width:100%;
+    position:relative;
+}
+.main .left-section .search input{
+    width:100%;
+    outline:none;
+    border:none;
+    color:#000;
+    height:40px;
+    padding:0 10px;
+}
+.main .left-section .search input::placeholder{
+    text-transform: capitalize;
+    color:#000;
+}
+.search-icon{
+    position: absolute;
+    right:0;
+    background-color: #000;
+    height:100%;
+    width:45px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.right-section{
+    overflow-y: auto;
+}
+.right-section .content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(260px , 1fr));
+    gap:20px;
+    padding:20px;
+}
+.right-section .content .card{
+    flex-basis: 260px;
+    background-color: #fff;
+    box-shadow: 0  0 10px 2px #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.right-section .content .card .card-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.right-section .content .card button{
+    background-color: mediumslateblue;
+    color:#fff;
+    outline:none;
+    border:none;
+    border-radius: 50px;
+    width:150px;
+    height:35px;
+    font-weight: 500;
+}
+
+/* *****************************************************  popap details*/
+
+.popap-details{
+    background-color: darkslateblue;
+    height: 100%;
+    padding:50px 20px;
+    color:#fff;
+    width:40%;
+    position:fixed;
+    left:-100%;
+    top:0;
+    transition: .8s;
+    
+}
+
+.popap-details .Instructions{
+    font-size: 19px;
+    margin: 30px 0;
+}
+.popap-details .pragraph-content-details{
+    line-height:2;
+}
+#close-icon{
+    position: absolute;
+    top:30px;
+    right:30px;
+    width:45px;
+    height:45px;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: #fff;
+    color:#000;
+    font-size: 23px;
+    cursor: pointer;
+}
+/* ***************************************************** */
+
+/* responseve */
+@media (max-width:912px){
+    .main{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+    .main .left-section{
+        height: 300px;
+    }
+    .right-section .content{
+        display: grid;
+        grid-template-columns: repeat(auto-fit , minmax(200px , 1fr));
+    }
+    .popap-details{
+        background-color: darkslateblue;
+        height: 100%;
+        padding:50px 20px;
+        color:#fff;
+        width:100%;
+        position:fixed;
+        left:-100%;
+        top:0;
+        transition: .8s;
+        
+    }
+}
